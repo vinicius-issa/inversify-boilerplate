@@ -1,13 +1,12 @@
-import "reflect-metadata";
+import 'reflect-metadata';
 import * as bodyParser from 'body-parser';
-import { Container } from "inversify";
-import { InversifyExpressServer } from "inversify-express-utils";
+import { Container } from 'inversify';
+import { InversifyExpressServer } from 'inversify-express-utils';
 
-import TYPES from "./types";
-
+import TYPES from './types';
 import './controllers/account/login'
 import { LoginService } from './services/account/login'
-
+import { PORT } from './constants'
 
 export class App {
   private readonly container: Container
@@ -31,8 +30,8 @@ export class App {
           });
 
           const app = server.build();
-          app.listen(5000);
-          console.log("Server started at 5000")
+          app.listen(PORT);
+          console.log(`Server started at ${PORT}`)
     }
 
 }
