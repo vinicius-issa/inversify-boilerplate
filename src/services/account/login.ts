@@ -1,9 +1,9 @@
-import "reflect-metadata";
-import { injectable } from "inversify";
+import 'reflect-metadata';
+import { injectable } from 'inversify';
 
 @injectable()
 export class LoginService {
-    indexTest(): any {
+    indexTest(): { data: { name: string }} {
         return {
           data: {
             name: 'Vinicius'
