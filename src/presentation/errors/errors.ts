@@ -2,11 +2,11 @@ import { HttpError } from '../protocols/http-error'
 
 export class BadRequestError implements HttpError {
   readonly status: number
+  readonly name: string
   constructor(
-    public readonly name: string,
-    public readonly message: string,
-    public readonly stack?: string
+    public readonly message: string
   ) {
     this.status = 400
+    this.name = 'BadRequestError'
   }
 }
