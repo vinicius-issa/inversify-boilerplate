@@ -2,7 +2,6 @@
   "compilerOptions": {
       "target": "es5",
       "lib": ["es6", "dom"],
-      "types": ["reflect-metadata"],
       "pretty": true,
       "sourceMap": true,
       "module": "commonjs",
@@ -16,6 +15,8 @@
       "src/**/*.ts"
   ],
   "exclude": [
-      "node_modules"
+      "node_modules",
+      "**/*.spec.ts",
+      "**/*.test.ts"
   ]
 }
