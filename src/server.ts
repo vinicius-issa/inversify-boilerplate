@@ -4,9 +4,9 @@ import { Container } from 'inversify';
 import { InversifyExpressServer } from 'inversify-express-utils';
 
 import TYPES from './types';
-import './controllers/account/login'
-import { LoginService } from './services/account/login'
+import './controllers/health-check'
 import { PORT } from './constants'
+import { HealthCheckService } from './services/health-check/health-check'
 
 export class App {
   private readonly container: Container
@@ -17,7 +17,7 @@ export class App {
     }
 
     configDependencies(): void {
-        this.container.bind<LoginService>(TYPES.LoginService).to(LoginService)
+        this.container.bind<HealthCheckService>(TYPES.HealthCheck).to(HealthCheckService)
     }
 
     createServer(): void {

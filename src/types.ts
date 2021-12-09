@@ -1,5 +1,5 @@
 const TYPES = {
-  LoginService: Symbol('LoginService')
+  HealthCheck: Symbol('HealthCheck')
 }
 
 export default TYPES
