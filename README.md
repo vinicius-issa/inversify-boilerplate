@@ -1,0 +1,1 @@
+# Vinicius Issa Inversify Boilerplate
